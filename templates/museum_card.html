@@ -1,0 +1,30 @@
+<div class="col">
+    <div class="card h-100">
+        <img src="{{ museum['image_url'] }}" class="card-img-top" alt="{{ museum['publicName'] }}" width="300"
+            height="300">
+        <div class="card-body">
+            <h5 class="card-title">{{ museum['publicName'] }}</h5>
+            <p class="card-text">{{ museum['teaser'] }}</p>
+        </div>
+
+        {% if museum.events|length > 0 and museum.prev_visit %}
+        <div class="position-absolute top-0 end-0 m-2">
+            <span class="ne p-1">New exhibition!</span>
+        </div>
+        {% endif %}
+
+        <div class="card-footer">
+            <div class="">
+                {% if museum.events|length > 0 %}
+                <b>Now on display:</b>
+                <a href="https://museum.nl/nl/zoeken?q={{ museum.events[0].name }}" class="elink"> {{
+                    museum.events[0].name }} > </p>
+                </a>
+                {% endif %}
+            </div>
+            <small class="text-muted"><i class="bi bi-geo-alt"></i> {{ museum['city']|title }} {% if
+                museum.distance_from_user is not none %} ({{ (museum.distance_from_user*10)|round/10 }} km) {% endif %}
+            </small>
+        </div>
+    </div>
+</div>

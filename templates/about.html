@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container w-75">
+    <h1 class="my-4">Q42: Next Museum Visit</h1>
+
+    <p><strong>Project Overview:</strong> <br>
+        "Next Museum Visit" is a recommendation system designed to promote the usage of Museumkaart among its 1.5
+        million
+        members in the Netherlands.
+        The aim of the project is to encourage users to visit more museums by suggesting personalized recommendations
+        based
+        on a combination of data from over 500 Dutch museums and user preferences.</p>
+
+    <h3>Goals:</h3>
+    <ul>
+        <li>Increase the frequency of museum visits by Museumkaart holders.</li>
+        <li>Provide tailored museum and activity suggestions to users based on their preferences and past behavior.</li>
+        <li>Utilize anonymous user data and museum information to enhance recommendations.</li>
+    </ul>
+
+    <h3>Methodology:</h3>
+    <p>The system works by analyzing the data from the Museumkaart platform, which includes the list of museums,
+        locations,
+        exhibitions, and activities available.
+        It also collects anonymous user data, including their museum visit history and preferences.</p>
+
+    <p>By combining these data sets, the system builds personalized recommendations that are presented to users to help
+        them
+        discover new museums and activities that might interest them, based on their profile and historical engagement
+        with
+        the platform.</p>
+
+    <p>This recommendation is split into three categories, namely
+    <ul>
+        <li>
+            <b>Perfect matches:</b> museums that align with the user's interests and preferences. Can include museums
+            they
+            have
+            visited before, if there is a current exhibition or event that matches their profile.
+        </li>
+        <li><b>Local spots:</b> museums close to the users place of residence. This category give the preference to
+            museums
+            that
+            are not very popular,
+            but are close to the user's location. This is to encourage users to visit museums that they might not have
+            considered or even known about otherwise.
+        </li>
+        <li><b>Hidden gems:</b> museums that are not very popular but have exhibitions or activities that match the
+            user's
+            interests very well. This category is designed to introduce users to lesser-known museums that they might
+            find
+            interesting based on their profile. These museums could be far from the user's location, but the system will
+            still recommend them based on the user's interests.S
+        </li>
+    </ul>
+
+    </p>
+
+    <h3>Technologies Used:</h3>
+    <ul>
+        <li><strong>Data Processing & Recommendation Algorithm:</strong> Python, Pandas, NumPy</li>
+        <li><strong>Web Framework:</strong> Flask, Bootstrap</li>
+    </ul>
+
+    <h3>Expected Impact:</h3>
+    <p>The system will not only help increase the number of visits to museums but also promote cultural enrichment by
+        introducing Museumkaart holders to museums they might not have considered otherwise.
+        It will provide a more engaging experience for users and ensure that museum visits are relevant and aligned with
+        their personal interests.</p>
+
+    <h3>About the creators</h3>
+    This project was created by the Brent Brakenhoff, Pim Meulensteen, Pascal Venema and Cas Gerritsen as part of the
+    course <i>Data Systems Project</i> at the University of Amsterdam.
+</div>
+<div class="mt-5"></div>
+{% endblock %}

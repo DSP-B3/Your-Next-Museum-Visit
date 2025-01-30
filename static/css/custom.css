@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'Replica Std';
+    src: url('../fonts/ReplicaStdRegular.otf') format('opentype'),
+        url('../fonts/ReplicaStdRegular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Replica Std', sans-serif;
+}
+
+.nav-link.active {
+    background-color: black;
+    color: white !important;
+    border-radius: 12px;
+}
+
+.hover {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: black;
+}
+
+.hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.1em;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.15s ease-out;
+}
+
+.hover:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+#title-img {
+    background-image: url("/static/img/museum.jpeg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.col-sm {
+    border-radius: 12px;
+    height: 9cm;
+    background-size: cover;
+    background-position: center;
+}
+
+.last-col {
+    background-color: #0F41D2;
+    color: white;
+    font-size: 1.25em;
+    height: 4cm;
+}
+
+.last-col>a {
+    color: white;
+    margin: .5em;
+}
+
+#title {
+    font-size: 4em;
+    line-height: 1em;
+}
+
+.btn-primary {
+    background-color: black;
+    border-color: black;
+    color: white;
+    transition: .5s;
+    border-radius: 12px;
+}
+
+.btn-primary:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+    transition: .5s;
+}
+
+.btn-primary:hover:active {
+    background-color: black;
+    color: white;
+    border-color: black;
+    transition: .15s;
+}
+
+#m1 {
+    background-image: url('/static/museum_images/a8b74025-7245-4830-8596-2d927c528454.jpg');
+}
+
+#m2 {
+    background-image: url('/static/museum_images/044a7044-3527-409e-8b9a-4de2615b7423.jpg')
+}
+
+#m3 {
+    background-image: url('/static/museum_images/f47fc74e-e3bf-4902-a96a-34c68471e414.jpg');
+}
+
+.elink {
+    color: #555;
+}
+
+.elink:hover {
+    color: #000;
+}
+
+.ne {
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+}

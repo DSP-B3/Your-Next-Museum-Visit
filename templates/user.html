@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>User Information</h1>
+<div>
+    <p><strong>Id:</strong> {{ user.person_id }}</p>
+    <p><strong>Location:</strong> {{ user.residence }}</p>
+    <p><strong>Age:</strong> {{ user.age }}</p>
+</div>
+<div>
+    <h2>Visited Museums</h2>
+    <ul>
+        {% for museum, visit_date in user.previous_visits %}
+        <li>{{ museum.publicName }} - Visited on {{ visit_date.strftime('%d-%m-%Y') }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

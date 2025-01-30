@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Recommendations</h1>
+    {% if user is none %}
+    <div class="alert alert-warning my-3" role="alert">
+        We were not able to give you any recommendations.
+    </div>
+    <p>
+        We are unable to give you recommendations because you are not logged in. Please <a href="/login">log in</a> to
+        see personal recommendations.
+    </p>
+    {% else %}
+    <p>Recommendations are based on the <a href="/id/{{ user.person_id }}">museums you have previously visited.</a></p>
+    <div class="my-4">
+        <h2>Perfect matches</h2>
+        <p>Based on your location and previous visits.</p>
+    </div>
+
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {% for museum in perfect_matches %}
+        {% include 'museum_card.html' with context %}
+        {% endfor %}
+    </div>
+
+
+    <div class="my-4">
+        <h2>Local spots</h2>
+        <p>Based on your approximate location and popularity of local museums</p>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {% for museum in local_spots %}
+        {% include 'museum_card.html' with context %}
+        {% endfor %}
+    </div>
+
+    <div class="my-4">
+        <h2>Hidden gems</h2>
+        <p>Based on your previous visits and popularity of local museums</p>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {% for museum in hidden_gems %}
+        {% include 'museum_card.html' with context %}
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
