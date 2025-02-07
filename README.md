@@ -16,7 +16,8 @@ The methodology and results of the project are detailed in the report, which can
 
 
 ## Running the project
-This project uses flask. To run the project, follow these steps:
+This project uses flask. To run the project, ensure that the museum data is stored in a folder called 'data', and then follow these steps:
+
 1. Clone the repository
 2. Install the required packages using `pip install -r requirements.txt`
 3. Run the project using `flask run`
