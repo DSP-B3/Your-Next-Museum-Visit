@@ -1,5 +1,5 @@
 # Next Museum Visit - Data System Project (DSP)
-A running demo is availible at [nextmuseumvisit.nl](https://nextmuseumvisit.nl).
+A running demo is available at [nextmuseumvisit.nl](https://nextmuseumvisit.nl).
 
 ## Project Overview
 
